@@ -6,47 +6,38 @@
   <title>Mani Preetham — Salesforce Developer</title>
   <meta name="description" content="Salesforce Certified Developer with 3+ years of experience in Apex, LWC, Flows, Sales Cloud, Integration, and Automation." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root { color-scheme: dark light; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; }
-    .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .glass:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
-    .tag { border: 1px solid rgba(255,255,255,.2); padding:.35rem .65rem; border-radius:9999px; font-size:.8rem; background: rgba(255,255,255,0.05); }
-    h1, h2, h3 { letter-spacing: -0.5px; }
-  </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 leading-relaxed">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur-lg supports-[backdrop-filter]:bg-neutral-950/70 border-b border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-      <a href="#home" class="font-extrabold tracking-tight text-lg">mani<span class="text-indigo-400">.sfdev</span></a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a class="hover:text-indigo-300 transition-colors" href="#skills">Skills</a>
-        <a class="hover:text-indigo-300 transition-colors" href="#projects">Projects</a>
-        <a class="hover:text-indigo-300 transition-colors" href="#experience">Experience</a>
-        <a class="hover:text-indigo-300 transition-colors" href="#certs">Certifications</a>
-        <a class="hover:text-indigo-300 transition-colors" href="#contact">Contact</a>
+  <header class="site-header">
+    <div class="container">
+      <a href="#home" class="logo">mani<span>.sfdev</span></a>
+      <nav class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button id="downloadResume" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-sky-500 hover:opacity-90 px-5 py-2 text-sm font-semibold shadow-lg">Download Resume</button>
+      <button id="downloadResume" class="btn-primary">Download Resume</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="mx-auto max-w-6xl px-4 py-20">
-    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">M. Mani Preetham<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-teal-300">Salesforce Certified Developer</span></h1>
-    <p class="mt-6 text-neutral-300 max-w-2xl text-lg">3+ years in customizing and extending Salesforce using Apex, Lightning Web Components, and Flows. Skilled in Sales Cloud, data migration, integration, and managed packages.</p>
-    <p class="mt-6 text-sm text-neutral-400">📧 manipreetham512@gmail.com • 📱 +91 9381332255</p>
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>M. Mani Preetham<br><span>Salesforce Certified Developer</span></h1>
+      <p class="intro">3+ years in customizing and extending Salesforce using Apex, Lightning Web Components, and Flows. Skilled in Sales Cloud, data migration, integration, and managed packages.</p>
+      <p class="contact-info">📧 manipreetham512@gmail.com • 📱 +91 9381332255</p>
+    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-3xl font-bold">Core Skills</h2>
-    <div class="mt-8 grid md:grid-cols-3 gap-8">
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold text-lg">Salesforce Platform</h3>
-        <ul class="mt-4 text-sm space-y-2">
+  <section id="skills" class="container">
+    <h2>Core Skills</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Salesforce Platform</h3>
+        <ul>
           <li>Sales Cloud implementation</li>
           <li>Apex Triggers & Classes</li>
           <li>Lightning Web Components & Aura</li>
@@ -55,17 +46,17 @@
           <li>AppExchange tools: S-Docs, S-Sign</li>
         </ul>
       </div>
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold text-lg">Integration & Automation</h3>
-        <ul class="mt-4 text-sm space-y-2">
+      <div class="card">
+        <h3>Integration & Automation</h3>
+        <ul>
           <li>Composite API</li>
           <li>Data Migration & Deduplication</li>
           <li>Managed Packages (S-Docs, S-Sign, Adobe)</li>
         </ul>
       </div>
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold text-lg">Other Tools</h3>
-        <ul class="mt-4 text-sm space-y-2">
+      <div class="card">
+        <h3>Other Tools</h3>
+        <ul>
           <li>HTML, CSS, JavaScript, SLDS</li>
           <li>Jira, Bitbucket, Flosum</li>
         </ul>
@@ -73,32 +64,30 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-3xl font-bold">Highlighted Projects</h2>
-    <div class="mt-8 grid md:grid-cols-3 gap-8">
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Sales Cloud Customization</h3>
-        <p class="mt-2 text-sm">Implemented lead, opportunity, rate, and insertion order management for an advertising client, improving operational efficiency.</p>
+  <section id="projects" class="container">
+    <h2>Highlighted Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Sales Cloud Customization</h3>
+        <p>Implemented lead, opportunity, rate, and insertion order management for an advertising client, improving operational efficiency.</p>
       </div>
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Document Generation & Signature Automation</h3>
-        <p class="mt-2 text-sm">Built LWCs and Apex for document workflows using S-Docs, S-Sign, and Adobe, reducing processing time by over 60%.</p>
+      <div class="card">
+        <h3>Document Generation & Signature Automation</h3>
+        <p>Built LWCs and Apex for document workflows using S-Docs, S-Sign, and Adobe, reducing processing time by over 60%.</p>
       </div>
-      <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Cross-org Integration</h3>
-        <p class="mt-2 text-sm">Integrated Salesforce orgs via Composite API, ensuring seamless data flow and reduced manual entry.</p>
+      <div class="card">
+        <h3>Cross-org Integration</h3>
+        <p>Integrated Salesforce orgs via Composite API, ensuring seamless data flow and reduced manual entry.</p>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-3xl font-bold">Professional Experience</h2>
-    <div class="mt-6 glass rounded-3xl p-6">
-      <h3 class="font-semibold">Salesforce Developer — Big Four Firm</h3>
-      <p class="text-sm text-neutral-400">Sep 2022 – Present</p>
-      <ul class="mt-3 text-sm list-disc list-inside space-y-1">
+  <section id="experience" class="container">
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>Salesforce Developer — Big Four Firm</h3>
+      <p class="duration">Sep 2022 – Present</p>
+      <ul>
         <li>Customized Sales Cloud for lead, opportunity, and rate management.</li>
         <li>Developed LWCs & Apex for document generation, improving efficiency by 60%.</li>
         <li>Integrated Salesforce orgs via Composite API.</li>
@@ -110,67 +99,36 @@
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certs" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-3xl font-bold">Certifications</h2>
-    <ul class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
-      <li class="glass p-4 rounded-3xl">Salesforce Certified Platform Developer I</li>
-      <li class="glass p-4 rounded-3xl">Salesforce Certified Administrator</li>
-      <li class="glass p-4 rounded-3xl">Salesforce Certified App Builder</li>
-      <li class="glass p-4 rounded-3xl">Salesforce Certified Sharing & Visibility Architect</li>
-      <li class="glass p-4 rounded-3xl">Salesforce Certified AI Associate</li>
-      <li class="glass p-4 rounded-3xl">Salesforce Certified Agentforce Specialist</li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-3xl font-bold">Education</h2>
-    <div class="mt-6 glass rounded-3xl p-6">
-      <h3 class="font-semibold">B.E. Electronics & Communication</h3>
-      <p class="text-sm text-neutral-400">Chaitanya Bharathi Institute of Technology, Hyderabad (2018 – 2022)</p>
-      <p class="mt-1 text-sm text-neutral-300">CGPA: 8.20</p>
+  <section id="certs" class="container">
+    <h2>Certifications</h2>
+    <div class="card-grid">
+      <div class="card">Salesforce Certified Platform Developer I</div>
+      <div class="card">Salesforce Certified Administrator</div>
+      <div class="card">Salesforce Certified App Builder</div>
+      <div class="card">Salesforce Certified Sharing & Visibility Architect</div>
+      <div class="card">Salesforce Certified AI Associate</div>
+      <div class="card">Salesforce Certified Agentforce Specialist</div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
-    <div class="glass rounded-3xl p-6">
-      <h3 class="text-xl font-bold">Contact</h3>
-      <p class="mt-2 text-sm text-neutral-300">Email: <a href="mailto:manipreetham512@gmail.com" class="underline">manipreetham512@gmail.com</a></p>
-      <p class="mt-1 text-sm text-neutral-300">Phone: +91 9381332255</p>
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.E. Electronics & Communication</h3>
+      <p>Chaitanya Bharathi Institute of Technology, Hyderabad (2018 – 2022)</p>
+      <p>CGPA: 8.20</p>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:manipreetham512@gmail.com">manipreetham512@gmail.com</a></p>
+      <p>Phone: +91 9381332255</p>
     </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script>
-    document.getElementById('downloadResume').addEventListener('click', function () {
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-      doc.setFontSize(16);
-      doc.text('M. Mani Preetham — Salesforce Certified Developer', 10, 10);
-      doc.setFontSize(11);
-      doc.text('Email: manipreetham512@gmail.com | Phone: +91 9381332255', 10, 20);
-      doc.text('Professional Summary:', 10, 30);
-      doc.text('Salesforce Certified Developer with 3+ years in Apex, LWC, Flows, Sales Cloud, integration, and automation.', 10, 36, { maxWidth: 190 });
-      doc.text('Skills:', 10, 48);
-      doc.text('- Sales Cloud, Apex, LWC, Flows, Reports, Dashboards', 10, 54);
-      doc.text('- Sharing rules & OWD Configuration', 10, 60);
-      doc.text('- Composite API, Data Migration, Managed Packages', 10, 66);
-      doc.text('- HTML, CSS, JS, SLDS, Jira, Bitbucket', 10, 72);
-      doc.text('Projects:', 10, 84);
-      doc.text('- Sales Cloud Customization for advertising client', 10, 90, { maxWidth: 190 });
-      doc.text('- Document Generation & Signature Automation', 10, 96, { maxWidth: 190 });
-      doc.text('- Cross-org Integration with Composite API', 10, 102, { maxWidth: 190 });
-      doc.text('Experience:', 10, 114);
-      doc.text('Salesforce Developer — Big Four Firm (Sep 2022 – Present)', 10, 120);
-      doc.text('- Customized Sales Cloud, developed LWCs, configured templates, received awards.', 10, 126, { maxWidth: 190 });
-      doc.text('Certifications:', 10, 142);
-      doc.text('- Platform Developer I, Administrator, App Builder, Sharing & Visibility Architect, AI Associate, Agentforce Specialist', 10, 148, { maxWidth: 190 });
-      doc.text('Education:', 10, 164);
-      doc.text('B.E. Electronics & Communication, CBIT Hyderabad, CGPA: 8.20', 10, 170);
-      doc.save('Mani_Preetham_Resume.pdf');
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
