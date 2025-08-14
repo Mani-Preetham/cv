@@ -129,6 +129,81 @@
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('downloadResume').addEventListener('click', function () {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(20);
+      doc.text('M. Mani Preetham', 10, 15);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(11);
+      doc.text('Email: manipreetham512@gmail.com | Phone: +91 9381332255', 10, 22);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Professional Summary', 10, 32);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(11);
+      doc.text('Salesforce Certified Developer with 3+ years of hands-on experience customizing and extending Salesforce using Apex, LWC, and Flows. Skilled in Sales Cloud implementation, integration, and automation.', 10, 38, { maxWidth: 190 });
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Skills', 10, 54);
+      doc.setFont('helvetica', 'normal');
+      const skills = [
+        'Sales Cloud', 'Apex Triggers & Classes', 'Lightning Web Components & Aura', 'Flows, Reports, Dashboards', 'Sharing Rules & OWD Configuration', 'Composite API, Data Migration', 'Managed Packages: S-Docs, S-Sign, Adobe', 'HTML, CSS, JavaScript, SLDS', 'Jira, Bitbucket, Flosum'
+      ];
+      let y = 60;
+      skills.forEach(skill => { doc.text(`• ${skill}`, 12, y); y += 6; });
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Projects', 10, y + 4);
+      y += 10;
+      doc.setFont('helvetica', 'normal');
+      const projects = [
+        'Sales Cloud Customization: Implemented lead, opportunity, rate, and insertion order management for an advertising client, improving efficiency.',
+        'Document Generation & Signature Automation: Built LWCs and Apex using S-Docs, S-Sign, and Adobe to reduce processing time by 60%.',
+        'Cross-org Integration: Integrated Salesforce orgs via Composite API for seamless data flow.'
+      ];
+      projects.forEach(p => { doc.text(`• ${p}`, 12, y, { maxWidth: 190 }); y += 10; });
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Experience', 10, y);
+      y += 8;
+      doc.setFont('helvetica', 'normal');
+      doc.text('Salesforce Developer — Big Four Firm (Sep 2022 – Present)', 12, y);
+      y += 6;
+      const expPoints = [
+        'Customized Sales Cloud for lead, opportunity, and rate management.',
+        'Developed LWCs & Apex for document generation.',
+        'Integrated Salesforce orgs via Composite API.',
+        'Led data quality improvement through deduplication and migration.',
+        'Configured secure sharing rules and hierarchies.',
+        'Configured document templates using S-Docs, S-Sign, Adobe.',
+        'Received multiple awards for innovation and timely delivery.'
+      ];
+      expPoints.forEach(e => { doc.text(`• ${e}`, 12, y, { maxWidth: 190 }); y += 6; });
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Certifications', 10, y + 4);
+      y += 10;
+      doc.setFont('helvetica', 'normal');
+      const certs = [
+        'Salesforce Certified Platform Developer I',
+        'Salesforce Certified Administrator',
+        'Salesforce Certified App Builder',
+        'Salesforce Certified Sharing & Visibility Architect',
+        'Salesforce Certified AI Associate',
+        'Salesforce Certified Agentforce Specialist'
+      ];
+      certs.forEach(c => { doc.text(`• ${c}`, 12, y); y += 6; });
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Education', 10, y + 4);
+      y += 10;
+      doc.setFont('helvetica', 'normal');
+      doc.text('B.E. Electronics & Communication, CBIT Hyderabad (2018 – 2022) — CGPA: 8.20', 12, y, { maxWidth: 190 });
+      doc.save('Mani_Preetham_Resume.pdf');
+    });
+  </script>
 </body>
 </html>
