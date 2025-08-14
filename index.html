@@ -5,46 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mani Preetham — Salesforce Developer</title>
   <meta name="description" content="Salesforce Certified Developer with 3+ years of experience in Apex, LWC, Flows, Sales Cloud, Integration, and Automation." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root { color-scheme: dark light; }
     html { scroll-behavior: smooth; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial; }
-    .glass { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.12); }
-    .tag { border: 1px solid rgba(255,255,255,.2); padding:.25rem .5rem; border-radius:9999px; font-size:.75rem; }
+    body { font-family: 'Poppins', sans-serif; }
+    .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .glass:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .tag { border: 1px solid rgba(255,255,255,.2); padding:.35rem .65rem; border-radius:9999px; font-size:.8rem; background: rgba(255,255,255,0.05); }
+    h1, h2, h3 { letter-spacing: -0.5px; }
   </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100">
+<body class="bg-neutral-950 text-neutral-100 leading-relaxed">
   <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/60 border-b border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+  <header class="sticky top-0 z-40 backdrop-blur-lg supports-[backdrop-filter]:bg-neutral-950/70 border-b border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
       <a href="#home" class="font-extrabold tracking-tight text-lg">mani<span class="text-indigo-400">.sfdev</span></a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-indigo-300" href="#skills">Skills</a>
-        <a class="hover:text-indigo-300" href="#projects">Projects</a>
-        <a class="hover:text-indigo-300" href="#experience">Experience</a>
-        <a class="hover:text-indigo-300" href="#certs">Certifications</a>
-        <a class="hover:text-indigo-300" href="#contact">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a class="hover:text-indigo-300 transition-colors" href="#skills">Skills</a>
+        <a class="hover:text-indigo-300 transition-colors" href="#projects">Projects</a>
+        <a class="hover:text-indigo-300 transition-colors" href="#experience">Experience</a>
+        <a class="hover:text-indigo-300 transition-colors" href="#certs">Certifications</a>
+        <a class="hover:text-indigo-300 transition-colors" href="#contact">Contact</a>
       </nav>
-      <button id="downloadResume" class="inline-flex items-center gap-2 rounded-2xl bg-indigo-500/90 hover:bg-indigo-400 px-4 py-2 text-sm font-semibold shadow-md shadow-indigo-500/20">Download Resume</button>
+      <button id="downloadResume" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-sky-500 hover:opacity-90 px-5 py-2 text-sm font-semibold shadow-lg">Download Resume</button>
     </div>
   </header>
 
   <!-- Hero -->
   <section id="home" class="mx-auto max-w-6xl px-4 py-20">
     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">M. Mani Preetham<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-teal-300">Salesforce Certified Developer</span></h1>
-    <p class="mt-4 text-neutral-300 max-w-2xl">3+ years in customizing and extending Salesforce using Apex, Lightning Web Components, and Flows. Skilled in Sales Cloud, data migration, integration, and managed packages.</p>
-    <p class="mt-4 text-sm text-neutral-400">manipreetham512@gmail.com • +91 9381332255</p>
+    <p class="mt-6 text-neutral-300 max-w-2xl text-lg">3+ years in customizing and extending Salesforce using Apex, Lightning Web Components, and Flows. Skilled in Sales Cloud, data migration, integration, and managed packages.</p>
+    <p class="mt-6 text-sm text-neutral-400">📧 manipreetham512@gmail.com • 📱 +91 9381332255</p>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Core Skills</h2>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
+    <h2 class="text-3xl font-bold">Core Skills</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-8">
       <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Salesforce Platform</h3>
-        <ul class="mt-3 text-sm space-y-1">
+        <h3 class="font-semibold text-lg">Salesforce Platform</h3>
+        <ul class="mt-4 text-sm space-y-2">
           <li>Sales Cloud implementation</li>
           <li>Apex Triggers & Classes</li>
           <li>Lightning Web Components & Aura</li>
@@ -54,16 +56,16 @@
         </ul>
       </div>
       <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Integration & Automation</h3>
-        <ul class="mt-3 text-sm space-y-1">
+        <h3 class="font-semibold text-lg">Integration & Automation</h3>
+        <ul class="mt-4 text-sm space-y-2">
           <li>Composite API</li>
           <li>Data Migration & Deduplication</li>
           <li>Managed Packages (S-Docs, S-Sign, Adobe)</li>
         </ul>
       </div>
       <div class="glass rounded-3xl p-6">
-        <h3 class="font-semibold">Other Tools</h3>
-        <ul class="mt-3 text-sm space-y-1">
+        <h3 class="font-semibold text-lg">Other Tools</h3>
+        <ul class="mt-4 text-sm space-y-2">
           <li>HTML, CSS, JavaScript, SLDS</li>
           <li>Jira, Bitbucket, Flosum</li>
         </ul>
@@ -73,8 +75,8 @@
 
   <!-- Projects -->
   <section id="projects" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Highlighted Projects</h2>
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
+    <h2 class="text-3xl font-bold">Highlighted Projects</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-8">
       <div class="glass rounded-3xl p-6">
         <h3 class="font-semibold">Sales Cloud Customization</h3>
         <p class="mt-2 text-sm">Implemented lead, opportunity, rate, and insertion order management for an advertising client, improving operational efficiency.</p>
@@ -92,7 +94,7 @@
 
   <!-- Experience -->
   <section id="experience" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Professional Experience</h2>
+    <h2 class="text-3xl font-bold">Professional Experience</h2>
     <div class="mt-6 glass rounded-3xl p-6">
       <h3 class="font-semibold">Salesforce Developer — Big Four Firm</h3>
       <p class="text-sm text-neutral-400">Sep 2022 – Present</p>
@@ -110,7 +112,7 @@
 
   <!-- Certifications -->
   <section id="certs" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Certifications</h2>
+    <h2 class="text-3xl font-bold">Certifications</h2>
     <ul class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
       <li class="glass p-4 rounded-3xl">Salesforce Certified Platform Developer I</li>
       <li class="glass p-4 rounded-3xl">Salesforce Certified Administrator</li>
@@ -123,7 +125,7 @@
 
   <!-- Education -->
   <section id="education" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl font-bold">Education</h2>
+    <h2 class="text-3xl font-bold">Education</h2>
     <div class="mt-6 glass rounded-3xl p-6">
       <h3 class="font-semibold">B.E. Electronics & Communication</h3>
       <p class="text-sm text-neutral-400">Chaitanya Bharathi Institute of Technology, Hyderabad (2018 – 2022)</p>
